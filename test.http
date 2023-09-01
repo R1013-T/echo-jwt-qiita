@@ -1,0 +1,27 @@
+GET http://localhost:1323
+Accept: application/json
+
+###
+# Register a new user
+POST http://localhost:1323/api/register
+Content-Type: application/json
+
+{
+  "name": "testUser2",
+  "email": "user2@test.com",
+  "password": "123456"
+}
+
+###
+# Login
+POST http://localhost:1323/api/login
+Content-Type: application/json
+
+{
+  "email": "user2@test.com",
+  "password": "123456"
+}
+
+###
+# Get user profile
+GET http://localhost:1323/api/restricted/users
